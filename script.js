@@ -32,3 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks[0].click();
   }
 });
+
+// JavaScript for modal functions
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = 'flex';
+}
+
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = 'none';
+}
+
+// Close modal if clicked outside the content
+window.onclick = function (event) {
+  if (event.target.classList.contains('modal')) {
+    event.target.style.display = 'none';
+  }
+};

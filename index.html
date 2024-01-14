@@ -5,7 +5,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Mahi's Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -37,37 +41,348 @@
     <!-- Content Sections -->
     <!-- Home Section -->
     <div id="home" class="content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.</p>
+      <center>
+        <div class="home-container">
+          <img src="assets/profile.png" alt="Headshot" class="home-headshot">
+          <div class="home-text">
+            <p>hello! 👋 i'm <strong>mahitha penmetsa</strong></p>
+
+            <ul>
+              <li>sophomore studying <em>computer science</em> at
+                Cornell's College of Engineering.</li>
+              <li>passionate about <em>software engineering and fintech</em>
+              </li>
+              <li>enthusiastic about <em>open-ended challenges</em>, <em>exploring new topics</em>, and
+                <em>collaborating with peers</em> to bring ideas to life.
+              </li>
+            </ul>
+          </div>
+
+
+        </div>
+      </center>
     </div>
 
+
     <!-- About Me Section -->
-    <div id="about-me" class="content" style="display:none;">
-      <p>, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.</p>
+    <!-- About Me Section -->
+    <div id="about-me" class="content">
+      <div id="more">
+        <h4>more about me...</h4>
+        <ul class="hobbies-list">
+          <li>i am minoring in applied math and operations reserach and information engineering </li>
+          <li>technically, i am proficient in java, python, angularjs, sql, and html/css</li>
+          <li>i am also interested in working with machine learning and developing products with a long lasting impact
+            from
+            start to finish</li>
+        </ul>
+      </div>
+      <br>
+      <div id="hobbies">
+        <h4>outside of school...</h4>
+        <ul class="hobbies-list">
+          <li>i enjoy finding <a href="https://www.goodreads.com/user/show/38473707-mahitha" target="_blank">new books
+              to read</a> - you can catch me exploring new genres and authors</li>
+          <li>i like watching the Philadelphia 76ers, Formula One, and thrillers</li>
+          <li>i also love running long distances and hope to run a marathon by the end of 2024</li>
+        </ul>
+      </div>
     </div>
+
 
     <!-- Projects Section -->
     <div id="projects" class="content" style="display:none;">
-      <p> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.</p>
+      <h2>Projects</h2>
+
+      <!-- Project Tile 1 -->
+      <div class="project-tile" onclick="openModal('modal-hooptracker')">
+        <img src="assets/hooptracker.png" alt="Project Image">
+        <p>HoopTracker Basketball Analysis with CV</p>
+      </div>
+      <div id="modal-hooptracker" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-hooptracker')">&times;</span>
+
+          <p>HoopTracker Basketball Analysis with CV</p>
+          <ul>
+            <li>Automatically analyze basketball game videos implementing YoloV7 and BotSORT algorithm with posse
+              estimation. </li>
+            <li> Format Game Statistics and display results and videos through JSON file from Fast API calls and
+              Dockerize project</li>
+
+            <li>Upgrade detection algorithm to YoloV7 and train on annotated dataset to increase processing speed by 8.4
+              times</li>
+            <br>
+            <div class="skills-list">
+              <ul class="skills-list">
+                <li class="skill-item">FastAPI</li>
+                <li class="skill-item">Python</li>
+                <li class="skill-item">Computer Vision</li>
+                <li class="skill-item">Docker</li>
+                <li class="skill-item">AWS S3 & EC2</li>
+                <li class="skill-item">Streamlit</li>
+                <li class="skill-item">YOLO</li>
+
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Project Tile 2 -->
+      <div class="project-tile" onclick="openModal('modal-f1ml')">
+        <img src="assets/f1ml.png" alt="Project Image">
+        <p>Formula 1 Machine Learning</p>
+      </div>
+      <div id="modal-f1ml" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-f1ml')">&times;</span>
+
+          <p>Formula 1 Machine Learning</p>
+          <ul>
+            <li>Create XGBoost Classifier with Bayesian Optimization to predict top 3 unordered racers with a 65%
+              accuracy.</li>
+            <li>Frequently webscrape F1 website and modify the ERGAST API dataset with features on current race tracks
+              and races</li>
+
+            <li>Develop Monte Carlo simulations to understand the value of the system’s predictions and the baseline
+              accuracy.</li>
+            <br>
+            <div class="skills-list">
+              <ul class="skills-list">
+                <li class="skill-item">TensorFlow</li>
+                <li class="skill-item">Python</li>
+                <li class="skill-item">Scikit-Learn</li>
+                <li class="skill-item">XGBoost</li>
+                <li class="skill-item">Bayesian Optimization</li>
+                <li class="skill-item">Beautiful Soup</li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- Project Tile 3 -->
+      <div class="project-tile" onclick="openModal('modal-amex')">
+        <img src="assets/amex.png" alt="Project Image">
+        <p>American Express ChatBot</p>
+      </div>
+      <div id="modal-amex" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-amex')">&times;</span>
+
+          <p>American Express ChatBot</p>
+          <ul>
+            <li>Evaluate prompt generating models and decide best prompting form for response for LLMs (ChatGPT, Llama2,
+              Flan) </li>
+            <li> Develop hierarchical clustering algorithm (HDBScan) for improving multi-class chatbot intent request
+              classification.</li>
+
+            <li>Extract themes and subthemes in dialogues to optimize prompting and explore ways to evaluate accuracy of
+              predictions.</li>
+            <br>
+            <div class="skills-list">
+              <ul class="skills-list">
+                <li class="skill-item">LLMs</li>
+                <li class="skill-item">GPT-4</li>
+                <li class="skill-item">Hugging Face</li>
+                <li class="skill-item">Prompt Engineering</li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Project Tile 4 -->
+      <div class="project-tile" onclick="openModal('modal-mit')">
+        <img src="assets/mit.png" alt="Project Image">
+        <p>Mit: Recreating Git on Terminal</p>
+      </div>
+      <div id="modal-mit" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-mit')">&times;</span>
+          <div id="mit">
+            <h4>Mit: Recreating Git on Terminal</h4>
+            <p>This project revolves around building a system that mirrors and improves upon the functions in the
+              version
+              control
+              system Git. This involves basic tasks such as reading and writing files, representing projects and
+              directories as trees, abstracting files into “Blobs,” and comparing these elements for effective version
+              control through the command line. </p>
+            <p>Through this project, I specifically worked on the functionality for users to access past repos and
+              understand the changes made. I did this through the use of a linked list like structure that would store
+              each commits parent. I then created a function to parse through a directory structure of trees and blobs
+              (directories and files) to make comparisons.</p>
+            <p>To make the command for creating commits, the user passes a simple mit commit in the command line. The
+              information of the commit are stored in the commit data structure.</p>
+            <a href="https://docs.google.com/document/d/1HK18Fx6Tq99jbCxc1OHsDX1PgTZjBa4Z11okHjOY4gA/edit?usp=sharing"
+              target="_blank">Click here to view the MIT commands and general project structure</a>
+            <br>
+            <a href="https://github.coecis.cornell.edu/msp259/cs3110_final_project" target="_blank">Github Repo</a>
+            <br>
+            <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kJIQIVQicHA?si=e5II_HTjOULRJdlM"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <br>
+
+            <div class="skills-list">
+              <ul class="skills-list">
+                <li class="skill-item">OCaml</li>
+                <li class="skill-item">Git</li>
+                <li class="skill-item">Linux</li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Tile 5 -->
+      <div class="project-tile" onclick="openModal('modal-bc')">
+        <img src="assets/bcdiagnosis.png" alt="Project Image">
+        <p>Machine Learning for Breast Cancer Detection</p>
+      </div>
+      <div id="modal-bc" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-bc')">&times;</span>
+
+          <h4>Machine Learning for Breast Cancer Detection</h4>
+          <br>
+          <p>Compare Artificial Neural Networks, Decision Trees, and Naive Bayes diagnosis accuracy on mammogram images.
+          </p>
+          <p>Use ANOVA-One-Way Tukey Post-HOC tests with Microsoft Excel Analysis Toolpak software and GRADE quality of
+            evidence test.</p>
+          <br>
+          <p>I presented my research at the John Hopkins Global Health Leaders Conference!</p>
+
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/hYhQgJfL7_U?si=ZD4T53fwZVVC9YPC"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+
+          <div class="skills-list">
+            <ul class="skills-list">
+              <li class="skill-item">R</li>
+              <li class="skill-item">ANOVA-One Way Analysis</li>
+              <li class="skill-item">Microsoft Analysis Toolpak</li>
+
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Add more project tiles and modals as needed -->
+
     </div>
 
     <!-- Experiences Section -->
     <div id="experiences" class="content" style="display:none;">
-      <p> sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.</p>
+      <ul>
+        <span id="experience-title"><b><a href="https://www.fidelity.com/" target="_blank"
+              rel="noopener noreferrer">fidelity investments</a> — summer 2023 — merrimack, nh</b></span>
+        <li>i moved data transformation files associated with the Integration Solution team's clients (1000+) to AWS
+          Athena to simplify
+          backend monitoring for consulting teams. </li>
+        <li>i created a styling pipeline that could automatically be applied when deploying content. this is utilized
+          within the entire product area (1300+ employees, 400+
+          partners). </li>
+        <li>i formulated unique splunk and snowflake queries and automated the process to deliver client-secure
+          information regarding SSO
+          integration usage through a widget</li>
+        <li>i set up fundamental starter code to initiate the move to a new headless content management system, Tridion,
+          and
+          efficiently integrate within the existing web services. </li>
+        <br>
+        <div class="skills-list">
+          <ul class="skills-list">
+            <li class="skill-item">AWS</li>
+            <li class="skill-item">AngularJS</li>
+            <li class="skill-item">Snowflake</li>
+            <li class="skill-item">HTML/CSS</li>
+            <li class="skill-item">Splunk</li>
+            <li class="skill-item">Agile Project Management</li>
+            <li class="skill-item">Tridion</li>
+            <li class="skill-item">Jasmine</li>
+            <li class="skill-item">Git</li>
+          </ul>
+        </div>
+
+        <br>
+        <span id="experience-title"><b><a href="https://cornelldata.science/" target="_blank"
+              rel="noopener noreferrer">cornell data science</a> — ithaca, ny</b></span>
+        <li>i worked on a project to automatically analyze basketball game videos with the use of YOLOV7 and botsort
+          algorithm with posse estimation. i worked on implementing the api relationships and connecting to AWS s3
+          buckets. </li>
+        <li>i also developed an XGB ranker model, integrating neural networks, random forest trees, and bayesian
+          optimization to make predictions on the 2023 Formula 1 Races. additionally, i web scraped data and cleaned
+          database for full team usage.</li>
+        <li>i am a teaching assistant for INFO 1998: Intro to Machine Learning where i teach topics like visualizations
+          and imputations and grade over 70+ students' assignments. </li>
+        <br>
+        <div class="skills-list">
+          <ul class="skills-list">
+            <li class="skill-item">AWS S3 buckets</li>
+            <li class="skill-item">FastAPI</li>
+            <li class="skill-item">Docker</li>
+            <li class="skill-item">Python</li>
+            <li class="skill-item">Java</li>
+            <li class="skill-item">Pytorch</li>
+            <li class="skill-item">Streamlit</li>
+            <li class="skill-item">Beautiful Soup</li>
+            <li class="skill-item">Computer Vision (YOLO)</li>
+            <li class="skill-item">Pandas</li>
+            <li class="skill-item">Git</li>
+          </ul>
+        </div>
+        <br>
+        <span id="experience-title"><b><a href="https://www.cornellbusinessanalytics.org/" target="_blank"
+              rel="noopener noreferrer">cornell business analytics</a> — ithaca, ny</b></span>
+        <li>as a project manager, i worked with a marketing technology company to create an automatic migration pipeline
+          which moved their client data from Amazon marketplace to a presentable PowerBI dashboard </li>
+        <li>i advised a pay per mile auto insurance company on creating a long term customer retention strategy based on
+          a regression analysis of customer behavior trends </li>
+
+        <li>as new member education director, i developed a 10 week curriculum to teach over 30 new members how to use
+          data analysis tools (SQL, pandas, tableau) and problem solve with business frameworks. </li>
+
+        <div class="skills-list">
+          <ul class="skills-list">
+            <li class="skill-item">Tableau</li>
+            <li class="skill-item">Python</li>
+            <li class="skill-item">Excel</li>
+            <li class="skill-item">PowerBI</li>
+            <li class="skill-item">SQL</li>
+            <li class="skill-item">Pandas</li>
+            <li class="skill-item">Numpy</li>
+            <li class="skill-item">Microsoft Office</li>
+            <li class="skill-item">Amazon Marketplace API</li>
+
+          </ul>
+        </div>
+      </ul>
     </div>
 
     <!-- Contact Section -->
     <div id="contact" class="content" style="display:none;">
-      <p> ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.</p>
+      <div id="contact-text">
+        <p>let's connect...</p>
+        <a href="assets/resume.pdf" target="_blank">resume</a> |
+        <a href="https://www.linkedin.com/in/mahitha-penmetsa/" target="_blank">linkedin</a> |
+        <a href="https://github.com/mahithapen" target="_blank">github</a> |
+        <p>shoot me an <a href="mailto:msp259@cornell.edu">email</a> to learn more!</p>
+      </div>
     </div>
   </div>
 
   <!-- Third Container for Ending Message -->
   <div id="end">
+    <strong>
+      <p>Mahitha Penmetsa</p>
+    </strong>
     <a href="https://www.linkedin.com/in/mahitha-penmetsa/" target="_blank">LinkedIn</a> |
     <a href="https://github.com/mahithapen" target="_blank">GitHub</a>
   </div>

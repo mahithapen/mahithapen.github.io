@@ -23,11 +23,12 @@ body {
 
 #first {
   color: #333;
-  padding: 40px;
+  padding: 10px;
   text-align: center;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 44px;
+  font-weight: 1000;
 }
+
 
 #main-content {
   padding: 20px;
@@ -50,11 +51,62 @@ body {
   text-decoration: underline;
 }
 
+.home-container {
+  max-width: 50%;
+  /* Adjust as needed */
+}
+
+.home-headshot {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /* Circular image */
+  margin-bottom: 20px;
+  object-fit: cover;
+  /* Ensures the image is well-fitted */
+}
+
+.home-text {
+  font-size: 16px;
+  /* Adjust as needed */
+  line-height: 1.5;
+  /* Improves readability */
+  margin: 0 auto;
+  /* Centers the text */
+}
+
+.home-text ul {
+  list-style-position: inside;
+  text-align: left;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.home-text li {
+  text-align: center;
+}
+
+#contact-text a {
+  color: rgba(8, 38, 70, 0.716);
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+#contact-text a:hover {
+  text-decoration: underline;
+}
+
+
 .content {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 20px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 #end {
@@ -75,3 +127,155 @@ body {
 #end a:hover {
   text-decoration: underline;
 }
+
+#about-me {
+  text-align: left;
+}
+
+#about-me h4,
+#about-me h5 {
+  color: #33485f;
+  /* Stylish color for headings */
+  margin-bottom: 10px;
+}
+
+
+.hobbies-list {
+  list-style: disc;
+  padding: 0;
+  gap: 10px;
+  margin-bottom: 20px;
+  /* Added spacing between sections */
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  /* Added spacing between sections */
+}
+
+.skill-item {
+  background-color: #33485f;
+  /* Blue background */
+  color: white;
+  /* White text */
+  border-radius: 10px;
+  /* Rounded corners */
+  padding: 5px 10px;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow */
+  cursor: pointer;
+  /* Hand cursor on hover */
+}
+
+.skill-item:hover {
+  background-color: #2a3749;
+  /* Slightly darker blue on hover */
+}
+
+#more {
+  margin-left: 100px;
+}
+
+#hobbies {
+  margin-left: 100px;
+}
+
+.hobbies-list {
+
+  padding: 0;
+  margin: 0;
+}
+
+.hobbies-list li {
+  text-align: left;
+  margin-bottom: 10px;
+  /* Increase the bottom margin for more space */
+  font-size: 16px;
+  /* Optional: Adjust the font size as needed */
+}
+
+.hobbies-list a {
+  color: #007bff;
+  /* Link color */
+  text-decoration: none;
+  /* Removes underline */
+}
+
+.hobbies-list a:hover {
+  text-decoration: underline;
+  /* Underline on hover */
+}
+
+#experiences li {
+  text-align: left;
+}
+
+#tools {
+  font-weight: bold;
+}
+
+#experience-title {
+  font-weight: bold;
+  font-size: x-large;
+  padding: 10px;
+
+}
+
+#experience-title a {
+  color: #0d3b6d;
+  text-decoration: none;
+}
+
+/* Style for Modals */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.project-tile {
+  display: inline-block;
+  margin: 15px;
+  cursor: pointer;
+  width: 200px;
+  /* Set a fixed width for each project tile */
+}
+
+.project-tile img {
+  width: 100%;
+  /* Make sure the image fills the entire tile */
+}
+
+#mit {
+  width: 1200px;
+}
+
+/* ... Your existing CSS styles ... */
