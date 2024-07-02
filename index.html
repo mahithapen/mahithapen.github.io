@@ -94,6 +94,44 @@
     <div id="projects" class="content" style="display:none;">
       <h2>Projects</h2>
 
+      <!-- Project Tile 0 -->
+      <div class="project-tile" onclick="openModal('modal-mathsearch')">
+        <img src="assets/mathsearch.png" alt="Project Image">
+        <p>MATHSEARCH Latex Search</p>
+        <a href="https://github.com/CornellDataScience/MathSearch/wiki">Click here for MathSearch wiki!</a>
+
+      </div>
+      <div id="modal-mathsearch" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-mathsearch')">&times;</span>
+
+          <p>MATHSEARCH Latex Search</p>
+          <ul>
+            <li>Configured and optimized YOLOv8 model on AWS Sagemaker for equation detection in PDFs to make more
+              scaleable.
+            </li>
+            <li> Integrated DynamoDB with WebSockets for fast communication, storing connection and file uuIDs to
+              retrieve results.</li>
+
+            <li>Implemented API Gateway with SNS system to notify Lambda functions upon S3 uploads for frontend polling
+            </li>
+            <br>
+            <div class="skills-list">
+              <ul class="skills-list">
+                <li class="skill-item">Websockets</li>
+                <li class="skill-item">Python</li>
+                <li class="skill-item">Computer Vision</li>
+                <li class="skill-item">DynamoDB</li>
+                <li class="skill-item">AWS S3 & SageMaker</li>
+                <li class="skill-item">Lambda Functions</li>
+                <li class="skill-item">YOLO</li>
+
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+
       <!-- Project Tile 1 -->
       <div class="project-tile" onclick="openModal('modal-hooptracker')">
         <img src="assets/hooptracker.png" alt="Project Image">
